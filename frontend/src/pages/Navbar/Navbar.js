@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { FaUserCircle } from "react-icons/fa"; // Import user icon
-import axios from "axios"; // Import axios for API call
+import { FaUserCircle, FaBars, FaTimes } from "react-icons/fa"; // Added icons
+import axios from "axios";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -9,6 +9,7 @@ const Navbar = () => {
   const location = useLocation();
   const isAuthenticated = localStorage.getItem("token");
   const [user, setUser] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Added state for mobile menu
 
   // Fetch user data if authenticated
   useEffect(() => {
@@ -21,7 +22,7 @@ const Navbar = () => {
               Authorization: `Bearer ${token}`,
             },
           });
-          const userData = response.data; // Assuming API returns user details
+          const userData = response.data;
           setUser(userData);
         }
       } catch (error) {
@@ -41,26 +42,35 @@ const Navbar = () => {
     }
   }, [isAuthenticated, navigate, location.pathname]);
 
+  // Toggle mobile menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/">Placement Call</Link>
       </div>
-      <ul className="navbar-links">
-        <li><Link to="/studentslist">All Students</Link></li>
-        <li><Link to="/interviews">Interviews</Link></li>
-        <li><Link to="/alljobs">All Jobs</Link></li>
-        {/* <li><Link to="/students/add">Add Jobs</Link></li> */}
-        {/* <li><Link to="/studentportal">Student Portal</Link></li> */}
-        {/* <li><Link to="/addInterview">Interview Schedule</Link></li> */}
+
+      {/* Hamburger menu button */}
+      <button className="menu-toggle" onClick={toggleMenu}>
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      {/* Navigation links with mobile menu class */}
+      <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
+        <li><Link to="/studentslist" onClick={() => setIsMenuOpen(false)}>All Students</Link></li>
+        <li><Link to="/interviews" onClick={() => setIsMenuOpen(false)}>Interviews</Link></li>
+        <li><Link to="/alljobs" onClick={() => setIsMenuOpen(false)}>All Jobs</Link></li>
       </ul>
 
-      {/* Right side Auth section */}
-      <div className="navbar-auth">
+      {/* Auth section with mobile menu class */}
+      <div className={`navbar-auth ${isMenuOpen ? 'active' : ''}`}>
         {isAuthenticated ? (
           <div className="user-info">
             <FaUserCircle className="user-icon"/>
-            {user ? <span className="username">Hii {user.name}</span> : <span>Loading...</span>}
+            {user ? <span className="username">Hi {user.name}</span> : <span>Loading...</span>}
             <button
               onClick={() => {
                 localStorage.removeItem("token");
@@ -73,8 +83,8 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            <Link to="/register">Register</Link>
-            <Link to="/login">Login</Link>
+            <Link to="/register" onClick={() => setIsMenuOpen(false)}>Register</Link>
+            <Link to="/login" onClick={() => setIsMenuOpen(false)}>Login</Link>
           </>
         )}
       </div>
