@@ -29,7 +29,7 @@ const AddStudent = () => {
     e.preventDefault(); // Prevent default form submission
 
     try {
-      const response = await fetch('http://localhost:3808/api/students', {
+      const response = await fetch('https://placement-cell-mern-backend.onrender.com/api/students', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
