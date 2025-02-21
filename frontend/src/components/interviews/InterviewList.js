@@ -18,7 +18,7 @@ const InterviewList = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    fetch("http://localhost:3808/api/students")
+    fetch("https://placement-cell-mern-backend.onrender.com/api/students")
       .then((response) => response.json())
       .then((data) => setStudents(data))
       .catch((error) => console.error("Error fetching students:", error));
