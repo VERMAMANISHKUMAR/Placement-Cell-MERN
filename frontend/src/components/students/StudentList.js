@@ -17,7 +17,7 @@ const StudentList = () => {
     useEffect(() => {
         const fetchStudents = async () => {
             try {
-                const response = await fetch('http://localhost:3808/api/students');
+                const response = await fetch('https://placement-cell-mern-backend.onrender.com/api/students');
                 if (!response.ok) {
                     const errorData = await response.json();
                     const errorMessage = errorData?.error || response.statusText;
@@ -44,7 +44,7 @@ const StudentList = () => {
 
     const handleDelete = async (studentId) => {
         try {
-            const response = await fetch(`http://localhost:3808/api/students/${studentId}`, {
+            const response = await fetch(`https://placement-cell-mern-backend.onrender.com/api/students/${studentId}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {
