@@ -1,0 +1,17 @@
+/* Main form container */
+.form-container-main {
+          max-width: 600px;
+          margin: 30px auto;
+        }
+        
+        /* Add shadow and padding to the form box */
+        .form-container {
+          border-radius: 8px;
+        }
+        
+        /* Button hover effect */
+        .btn-primary:hover {
+          background-color: #0056b3; /* Darker shade of Bootstrap primary */
+          border-color: #0056b3;
+        }
+        

@@ -1,0 +1,120 @@
+/* Container for the entire page */
+.container {
+          margin-top: 50px;
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        /* Job search form styling */
+        .job-search-form {
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+        }
+        
+        .job-search-form input,
+        .job-search-form select,
+        .job-search-form button {
+          padding: 10px;
+          font-size: 16px;
+          border-radius: 5px;
+        }
+        
+        .job-search-form input {
+          flex: 2;
+        }
+        
+        .job-search-form select {
+          flex: 1;
+        }
+        
+        .job-search-form button {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+        
+        .job-search-form button:hover {
+          background-color: #0056b3;
+        }
+        
+        /* Card for each job listing */
+        .job-listings {
+          margin-top: 20px;
+        }
+        
+        .job-listing-card {
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+        }
+        
+        .job-listing-card img {
+          width: 100%;
+          height: auto;
+        }
+        
+        .job-listing-card .card-body {
+          padding: 15px;
+        }
+        
+        .job-listing-card .card-body h5 {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        
+        .job-listing-card .card-body p {
+          margin: 5px 0;
+        }
+        
+        .job-listing-card .card-footer {
+          text-align: center;
+          background-color: #f8f9fa;
+          padding: 10px;
+        }
+        
+        .job-listing-card .card-footer a {
+          text-decoration: none;
+          color: white;
+        }
+        
+        .job-listing-card .card-footer button {
+          padding: 8px 16px;
+          background-color: #28a745;
+          border: none;
+          border-radius: 5px;
+        }
+        
+        .job-listing-card .card-footer button:hover {
+          background-color: #218838;
+        }
+        
+        /* Carousel styles */
+        .carousel-container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        
+        .carousel-inner img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+        }
+        
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+          background-color: rgba(0, 0, 0, 0.5);
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        

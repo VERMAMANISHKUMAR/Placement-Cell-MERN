@@ -1,0 +1,7 @@
+/* AutoSlider.css */
+.carousel-image {
+          width: 100%;
+          height: auto; /* Maintain aspect ratio */
+          max-height: 400px; /*Optional max height*/
+        }
+        

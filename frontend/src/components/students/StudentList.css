@@ -1,0 +1,198 @@
+/* Container for the whole student list */
+.student-list-container {
+          width: 90%;
+          margin: 0 auto;
+          padding: 20px;
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+        
+        h1 {
+          font-size: 2rem;
+          color: #333;
+          margin-bottom: 10px;
+        }
+        
+        p {
+          font-size: 1.1rem;
+          color: #666;
+          margin-bottom: 20px;
+        }
+        
+        /* Style for the table */
+        .student-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+        }
+        
+        .student-table th,
+        .student-table td {
+          border: 1px solid #ddd;
+          padding: 10px;
+          text-align: left;
+        }
+        
+        .student-table th {
+          background-color: #f4f4f4;
+          font-weight: bold;
+        }
+        
+        .student-table tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+        
+        .student-table tr:hover {
+          background-color: #f1f1f1;
+        }
+        
+        .student-table td {
+          color: #555;
+          font-size: 0.9rem;
+        }
+        
+        /* Loader styles */
+        .loading {
+          font-size: 1.5rem;
+          color: #007bff;
+          margin-top: 20px;
+        }
+        
+        /* Error message styles */
+        .error {
+          font-size: 1.2rem;
+          color: red;
+          margin-top: 20px;
+        }
+        /*pagination style  */
+        .student-list-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+      
+      .student-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 20px;
+      }
+      
+      .student-table th,
+      .student-table td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: center;
+      }
+      
+      .student-table th {
+          background-color: #f4f4f4;
+          font-weight: bold;
+      }
+      
+      .pagination {
+          display: flex;
+          justify-content: center;
+          margin-top: 20px;
+      }
+      
+      .page-button {
+          background-color: #007bff;
+          color: white;
+          border: none;
+          margin: 0 5px;
+          padding: 8px 16px;
+          cursor: pointer;
+          border-radius: 4px;
+      }
+      
+      .page-button:hover {
+          background-color: #0056b3;
+      }
+      
+      .page-button.active {
+          background-color: #0056b3;
+          font-weight: bold;
+      }
+      /* CSV file style */
+      .export-buttons {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      
+      /* Use a single class for buttons and apply variations using pseudo-classes */
+      .export-button {
+        padding: 10px 15px;
+        font-size: 14px;
+        color: white;
+        border: none;
+        margin-left: 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none; /* For the <Link> inside the button */
+        text-align: center;
+        transition: opacity 0.2s ease; /* Smooth transition for hover effect */
+      }
+      .export-button-a{
+        background-color: #d4ff00;
+        padding: 10px 15px;
+        font-size: 14px;
+        color: white;
+        border: none;
+        margin-left: 43rem;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none; /* For the <Link> inside the button */
+        text-align: center;
+        transition: opacity 0.2s ease; /* Smooth transition for hover effect */
+      }
+      /* Style variations using pseudo-classes */
+      .export-button.csv-button {
+        background-color: #007bff; /* Blue button */
+      }
+      
+      .export-button.excel-button {
+        background-color: #28a745; /* Green button */
+      }
+      
+      .export-button:hover {
+        opacity: 0.9;
+      }
+      
+      .export-button a {
+        color: inherit; 
+        text-decoration: none;
+        display: block; 
+      }
+      .export-button-a a {
+        color: inherit; 
+        text-decoration: none;
+        display: block; 
+      }
+      /*delete booton style  */
+      /* Add this to your StudentList.css file */
+
+.delete-button {
+  background-color: #ff4d4d; /* Red color for the delete button */
+  color: white; /* White text */
+  border: none; /* Remove borders */
+  padding: 8px 12px; /* Add padding for better appearance */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px; /* Font size */
+  cursor: pointer; /* Pointer cursor for buttons */
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #e60000; /* Darker red on hover */
+}
+
+.delete-button:active {
+  background-color: #cc0000; /* Even darker red on click */
+  transform: scale(0.98); /* Slightly shrink the button */
+}
+
+.delete-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 5px #e60000; /* Add a red glow */
+}
