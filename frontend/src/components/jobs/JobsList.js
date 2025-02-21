@@ -83,7 +83,7 @@ const JobsList = ({ jobs }) => {
             <div className="card h-100 shadow">
            
               <div className="card-body">
-                <h5 className="card-title">{job.companyName}</h5>
+                <h5 className="card-title" style={{textAlign:'center'}}>{job.companyName}</h5>
                 <p className="card-text">{job.description}</p>
                 <p><strong>Experience:</strong> {job.experience}</p>
                 <p><strong>Skills:</strong> {job.skills.join(', ')}</p>
