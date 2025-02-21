@@ -16,7 +16,7 @@ const Navbar = () => {
       try {
         const token = localStorage.getItem("token");
         if (token) {
-          const response = await axios.get("http://localhost:3808/api/auth/user", {
+          const response = await axios.get("https://placement-cell-mern-backend.onrender.com/api/auth/user", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
