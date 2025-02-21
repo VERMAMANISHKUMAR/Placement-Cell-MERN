@@ -29,7 +29,7 @@ const InterviewForm = () => {
 
     try {
       // Send POST request with formData
-      const response = await fetch('http://localhost:3808/api/interviews', {
+      const response = await fetch('https://placement-cell-mern-backend.onrender.com/api/interviews', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
