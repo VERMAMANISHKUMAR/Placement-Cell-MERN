@@ -1,93 +1,204 @@
-
-     
-        /* Navbar.css */
+/* Base styles */
 .navbar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          background-color: #007bff;
-          padding: 10px 20px;
-          color: white;
-          font-family: Arial, sans-serif;
-         
-        }
-        
-        .navbar-logo a {
-          text-decoration: none;
-          color: white;
-          font-size: 1.5rem;
-          font-weight: bold;
-          margin-left: 20px;
-        
-        }
-        
-        .navbar-links {
-          list-style: none;
-          display: flex;
-           gap: 15px;
-           margin-top: 10px;
-           font-size: 18px;
-        }
-        
-        .navbar-links li a {
-          text-decoration: none;
-          color: white;
-          transition: color 0.3s ease;
-        
-        
-        }
-        
-        .navbar-links li a:hover {
-          color: #ffcc00;
-         
-        }
-        /* Animate underline on hover */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-        .navbar-auth a {
-          text-decoration: none;
-          color: white;
-          transition: color 0.3s ease;
-           margin-right: 20px;
-           font-size: 18px;
-        }
-        
-        .navbar-auth a:hover {
-          color: #ffcc00;
-         
-        }
-        
-        input[type="text"] {
-          padding: 5px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          outline: none;
-        }
-        /* ----------users icon */
-        .user-info {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-        
-   
-        
-        .username {
-          font-size: 16px;
-          font-weight: bold;
-        }
-        .user-icon {
-          font-size: 24px;
-          color: white;
-          margin-right: 5px;
-        }
-        
-        .logout-btn {
-          background: red;
-          color: white;
-          border: none;
-          padding: 5px 10px;
-          cursor: pointer;
-          border-radius: 5px;
-          margin-right: 20px;
-        }
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  
+ 
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #007bff;
+}
+
+.navbar-auth {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-auth a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navbar-auth a:last-child {
+  background-color: #007bff;
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-icon {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.username {
+  font-weight: 500;
+  color: #333;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Mobile Styles (up to 768px) */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 1rem;
+  }
+
+  .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 0.4rem;
+  }
+
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: rgb(255, 255, 255);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.active {
+      display: flex;
       
+  }
+
+  .navbar-auth {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding: 1rem;
+      background-color: white;
+  }
+
+  .navbar-auth.active {
+      display: flex;
+  }
+
+  .user-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+  }
+
+  .logout-btn {
+      width: 100%;
+  }
+}
+
+/* Tablet Styles (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+      padding: 1rem;
+  }
+
+  .navbar-links {
+      gap: 1rem;
+  }
+
+  .navbar-auth {
+      gap: 0.5rem;
+  }
+
+  .user-info {
+      gap: 0.5rem;
+  }
+
+  .username {
+      font-size: 0.9rem;
+  }
+}
+
+/* Desktop Styles (1025px and up) */
+@media (min-width: 1025px) {
+  .navbar {
+      padding: 1rem 4rem;
+  }
+
+  .navbar-logo a {
+      font-size: 1.8rem;
+  }
+
+  .navbar-links {
+      gap: 3rem;
+  }
+
+  .navbar-links a {
+      font-size: 1.1rem;
+  }
+
+  .user-info {
+      gap: 1.5rem;
+  }
+
+  .user-icon {
+      font-size: 1.8rem;
+  }
+
+  .username {
+      font-size: 1.1rem;
+  }
+}
