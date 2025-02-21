@@ -18,7 +18,7 @@ const InterviewList = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    fetch("https://placement-cell-mern-backend.onrender.com/api/students")
+    fetch("http://localhost:3808/api/students")
       .then((response) => response.json())
       .then((data) => setStudents(data))
       .catch((error) => console.error("Error fetching students:", error));
@@ -198,7 +198,7 @@ const InterviewList = () => {
                     required
                   />
                 </label>
-                <button type="submit" className="add-button">Schedule Interview</button>
+                <button type="submit" className="add-button" style={{marginLeft:'90px'}}>Schedule Interview</button>
               </form>
             </div>
           </div>
