@@ -44,7 +44,7 @@ const Register = () => {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center vh-100" style={{marginTop:"30px"}}>
+    <Container className="d-flex justify-content-center align-items-center vh-100">
       <Card style={{ width: "400px" }} className="p-4 shadow">
         <h2 className="text-center mb-4">Register</h2>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -91,49 +91,3 @@ const Register = () => {
 
 export default Register;
 // -----------------------------------------------
-
-
-
-// import React, { useState } from "react";
-// import { Form, Button, Container, Card, Alert } from "react-bootstrap";
-// import { useNavigate } from "react-router-dom";
-
-// const Register = () => {
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [error, setError] = useState("");
-//   const navigate = useNavigate();
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     if (!email || !password) {
-//       setError("All fields are required!");
-//     } else {
-//       setError("");
-//       alert("Registration Successful!");
-//       navigate("/login");
-//     }
-//   };
-
-//   return (
-//     <Container className="d-flex justify-content-center align-items-center vh-100">
-//       <Card style={{ width: "400px" }} className="p-4 shadow">
-//         <h2 className="text-center mb-4">Register</h2>
-//         {error && <Alert variant="danger">{error}</Alert>}
-//         <Form onSubmit={handleSubmit}>
-//           <Form.Group className="mb-3">
-//             <Form.Label>Email address</Form.Label>
-//             <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)} />
-//           </Form.Group>
-//           <Form.Group className="mb-3">
-//             <Form.Label>Password</Form.Label>
-//             <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-//           </Form.Group>
-//           <Button variant="primary" type="submit" className="w-100">Register</Button>
-//         </Form>
-//       </Card>
-//     </Container>
-//   );
-// };
-
-// export default Register;
