@@ -44,7 +44,7 @@ const Register = () => {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center vh-100">
+    <Container className="d-flex justify-content-center align-items-center vh-100" style={{marginTop:"10px"}}>
       <Card style={{ width: "400px" }} className="p-4 shadow">
         <h2 className="text-center mb-4">Register</h2>
         {error && <Alert variant="danger">{error}</Alert>}
