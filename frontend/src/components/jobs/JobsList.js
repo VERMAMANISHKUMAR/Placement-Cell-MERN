@@ -81,7 +81,7 @@ const JobsList = ({ jobs }) => {
         {jobs.map((job) => (
           <div key={job.id} className="col-md-4 mb-4">
             <div className="card h-100 shadow">
-              // <img src={job.logo} alt="Company Logo" className="card-img-top p-3" />
+           
               <div className="card-body">
                 <h5 className="card-title">{job.companyName}</h5>
                 <p className="card-text">{job.description}</p>
