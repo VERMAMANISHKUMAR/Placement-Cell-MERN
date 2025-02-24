@@ -84,7 +84,7 @@ const Navbar = () => {
         ) : (
           <>
             <Link to="/register" onClick={() => setIsMenuOpen(false)}>Register</Link>
-            // <Link to="/login" onClick={() => setIsMenuOpen(false)}>Login</Link>
+          
           </>
         )}
       </div>
